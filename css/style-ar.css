@@ -35,7 +35,7 @@
 
 html,
 body {
-  background-color: white;
+  background-color: var(--grijs);
   height: 100%;
   margin: 0;
   overflow: hidden;
@@ -72,9 +72,9 @@ a {
 
 #section-1,
 .bladwijzer,
-#section-3,
-button {
-  background-color: white;
+button,
+#section-3 {
+  background-color: var(--grijs);
 }
 
 /* __________SECTIONS__________ */
@@ -220,6 +220,9 @@ section {
   body {
     font-size: 20px;
   }
+  button {
+    background-color: white;
+  }
   /* min768px__________SECTIONS__________ */
   .sections-container {
     height: 100%;
@@ -242,6 +245,7 @@ section {
     padding: 30px 30px 30px 20px;
   }
   .bladwijzer {
+    background-color: white;
     height: 100%;
     border: 2px solid var(--oker);
     padding: 15px 20px 20px;
