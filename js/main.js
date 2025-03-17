@@ -42,7 +42,7 @@ for (i = 0; i < acc.length; i++) {
     }
 
     // Check if any panel is open
-    var anyPanelOpen = [...acc].some(
+    var anyPanelOpen = [...acc].slice(1).some(
       (it) => it.nextElementSibling.style.maxHeight
     )
     if (anyPanelOpen) {
