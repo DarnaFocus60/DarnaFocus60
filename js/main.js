@@ -1,6 +1,30 @@
-// Accordion Menu
+// // Accordion Menu
+// var acc = document.getElementsByClassName('accordion')
+// var i
+// const $section1 = $('#section-1')
+
+// for (i = 0; i < acc.length; i++) {
+//   acc[i].addEventListener('click', function () {
+//     var panel = this.nextElementSibling
+//     if (panel.style.maxHeight) {
+//       panel.style.maxHeight = null
+//       this.classList.remove('active')
+//       $section1.classList.remove('full-height')
+//     } else {
+//       for (var it of acc) {
+//         it.classList.remove('active')
+//         it.nextElementSibling.style.maxHeight = null
+//       }
+//       panel.style.maxHeight = panel.scrollHeight + 'px'
+//       this.classList.add('active')
+//       $section1.classList.add('full-height')
+//     }
+//   })
+// }
+
 var acc = document.getElementsByClassName('accordion')
 var i
+const $section1 = $('#section-1')
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener('click', function () {
@@ -15,6 +39,16 @@ for (i = 0; i < acc.length; i++) {
       }
       panel.style.maxHeight = panel.scrollHeight + 'px'
       this.classList.add('active')
+    }
+
+    // Check if any panel is open
+    var anyPanelOpen = [...acc].some(
+      (it) => it.nextElementSibling.style.maxHeight
+    )
+    if (anyPanelOpen) {
+      $section1.addClass('full-height')
+    } else {
+      $section1.removeClass('full-height')
     }
   })
 }

@@ -29,6 +29,7 @@ $(document).ready(function () {
 
   function closeMenu() {
     dropoutMenu.addClass('hidden')
+    section3.removeClass('flex')
     section3.addClass('hidden') // Hides section-3 when menu closes
     section1.removeClass('full-height')
 
@@ -39,10 +40,9 @@ $(document).ready(function () {
 
   function toggleMenu() {
     dropoutMenu.toggleClass('hidden')
-    section3.toggleClass('hidden') // Show section-3 when menu opens
+    section3.toggleClass('hidden flex') // Show section-3 when menu opens
     menuIcon.toggleClass('hidden')
     xIcon.toggleClass('hidden')
-    section1.toggleClass('full-height')
   }
 
   // function initializeFlipbook() {
