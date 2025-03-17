@@ -10,9 +10,9 @@
 
 @font-face {
   font-family: DD;
-  src: url('fonts/DINdong.otf') format('opentype'),
-    url('fonts/DINdong.woff') format('woff'),
-    url('fonts/DINdong.woff2') format('woff2');
+  src: url('./fonts/DINdong.otf') format('opentype'),
+    url('./fonts/DINdong.woff') format('woff'),
+    url('./fonts/DINdong.woff2') format('woff2');
 }
 
 /* __________GENERAL__________ */
