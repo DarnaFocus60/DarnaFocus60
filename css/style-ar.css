@@ -113,7 +113,7 @@ section {
   width: 32px;
 }
 
-.dropout-menu.active {
+.dropout-menu .active {
   display: block;
   transition: height 0.3s ease;
 }
@@ -121,7 +121,10 @@ section {
 .accordion {
   width: 100%;
 }
-.accordion .active {
+.accordion.active .page-link {
+  color: var(--bruin);
+}
+#titel .page-link {
   color: var(--oker);
 }
 
