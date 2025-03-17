@@ -67,7 +67,7 @@ for (i = 0; i < acc.length; i++) {
 //     const newLink = document.createElement('link')
 //     newLink.id = 'styles-link'
 //     newLink.rel = 'stylesheet'
-//     newLink.href = '/css/style-ar.css' // Path to Arabic stylesheet
+//     newLink.href = 'css/style-ar.css' // Path to Arabic stylesheet
 //     head.appendChild(newLink)
 //   }
 // }
@@ -137,7 +137,7 @@ function toggleArabicStylesheet(lang) {
     const newLink = document.createElement('link')
     newLink.id = 'styles-link'
     newLink.rel = 'stylesheet'
-    newLink.href = '/css/style-ar.css'
+    newLink.href = 'css/style-ar.css'
     head.appendChild(newLink)
   }
 }
