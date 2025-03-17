@@ -42,9 +42,11 @@ for (i = 0; i < acc.length; i++) {
     }
 
     // Check if any panel is open
-    var anyPanelOpen = [...acc].slice(1).some(
-      (it) => it.nextElementSibling.style.maxHeight
-    )
+    var anyPanelOpen = [...acc]
+      .slice(1) // exclude the first .accordion element (= menubalk titel) from function
+      .some((it) => it.nextElementSibling.style.maxHeight)
+
+    // Make section-1 cover section-3 when .accordion panels are in use
     if (anyPanelOpen) {
       $section1.addClass('full-height')
     } else {

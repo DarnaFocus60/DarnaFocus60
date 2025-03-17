@@ -41,6 +41,7 @@ $(document).ready(function () {
   function toggleMenu() {
     dropoutMenu.toggleClass('hidden')
     section3.toggleClass('hidden flex') // Show section-3 when menu opens
+    section1.removeClass('full-height')
     menuIcon.toggleClass('hidden')
     xIcon.toggleClass('hidden')
   }
