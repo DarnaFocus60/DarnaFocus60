@@ -149,7 +149,7 @@ section {
 
 /* ___Section 2___ */
 #section-2 {
-  height: 100dvh;
+  height: 100vh;
   padding-top: 72px;
   overflow: scroll;
 }
@@ -182,7 +182,7 @@ section {
 
 /* ___Section 3___ */
 #section-3 {
-  height: 100dvh;
+  height: 100vh;
   width: 100%;
   position: fixed;
   bottom: 0;
