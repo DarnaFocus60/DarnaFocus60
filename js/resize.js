@@ -8,14 +8,13 @@ $(document).ready(function () {
   const menuIcon = $('#menu-icon')
   const xIcon = $('#x-icon')
   const section1 = $('#section-1')
-  const $section2 = $('#section-2')
+  const section2 = $('#section-2')
   const section3 = $('#section-3')
 
   let sectionOffsets = []
 
   function updateScrollPositions() {
     sectionOffsets = $('.page')
-      // .not('.white-img')
       .map(function () {
         return $(this).offset().top
       })
@@ -23,8 +22,8 @@ $(document).ready(function () {
   }
 
   function smoothScroll(target) {
-    let targetOffset = $(target).offset().top + $section2.scrollTop() - 73.5
-    $section2.animate({ scrollTop: targetOffset }, 600)
+    let targetOffset = $(target).offset().top + section2.scrollTop() - 73.5
+    section2.animate({ scrollTop: targetOffset }, 600)
   }
 
   function closeMenu() {
@@ -40,8 +39,12 @@ $(document).ready(function () {
 
   function toggleMenu() {
     dropoutMenu.toggleClass('hidden')
+    if (dropoutMenu.hasClass('hidden')) {
+      section1.removeClass('full-height')
+    } else {
+      section1.addClass('full-height')
+    }
     section3.toggleClass('hidden flex') // Show section-3 when menu opens
-    section1.removeClass('full-height')
     menuIcon.toggleClass('hidden')
     xIcon.toggleClass('hidden')
   }
@@ -114,7 +117,7 @@ $(document).ready(function () {
   //       const pageSelector = `#p${pageId.replace('page-', '')}`
   //       const $targetPage = $(pageSelector)
 
-  //       if ($targetPage.length && $section2.length) {
+  //       if ($targetPage.length && section2.length) {
   //         updateScrollPositions() // Ensure fresh positions before scrolling
   //         smoothScroll($targetPage)
   //       }
@@ -200,7 +203,7 @@ $(document).ready(function () {
         const pageSelector = `#p${pageId.replace('page-', '')}`
         const $targetPage = $(pageSelector)
 
-        if ($targetPage.length && $section2.length) {
+        if ($targetPage.length && section2.length) {
           updateScrollPositions()
           smoothScroll($targetPage)
         }
