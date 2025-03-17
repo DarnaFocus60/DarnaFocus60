@@ -11,9 +11,9 @@
 
 @font-face {
   font-family: DD;
-  src: url('../fonts/DINdong.otf') format('opentype'),
-    url('../fonts/DINdong.woff') format('woff'),
-    url('../fonts/DINdong.woff2') format('woff2');
+  src: url('fonts/DINdong.otf') format('opentype'),
+    url('fonts/DINdong.woff') format('woff'),
+    url('fonts/DINdong.woff2') format('woff2');
 }
 
 /* __________GENERAL__________ */
@@ -52,7 +52,6 @@ img {
 
 button {
   font: inherit;
-  background-color: white;
   color: inherit;
 }
 
@@ -64,8 +63,18 @@ a {
 .hidden {
   display: none;
 }
+.flex {
+  display: flex;
+}
 .full-height {
-  height: 100vh;
+  height: 100%;
+}
+
+#section-1,
+.bladwijzer,
+#section-3,
+button {
+  background-color: white;
 }
 
 /* __________SECTIONS__________ */
@@ -78,15 +87,14 @@ section {
 #section-1 {
   position: fixed;
   overflow: scroll;
-  z-index: 10;
-  background-color: white;
+  z-index: 20;
   transition: height 0.3s ease-in-out;
 }
 
 /* Ensure section-1 does not disappear */
-#section-1.active {
-  height: 100vh; /* Controls menu visibility */
-}
+/* #section-1.active {
+  /* height: 100vh; Controls menu visibility
+} */
 .menubalk {
   display: flex;
   align-items: flex-start;
@@ -118,7 +126,6 @@ section {
 }
 
 .panel {
-  background-color: white;
   color: var(--violet);
   max-height: 0;
   overflow: hidden;
@@ -148,7 +155,7 @@ section {
 
 /* ___Section 2___ */
 #section-2 {
-  height: 100dvh;
+  height: 100vh;
   padding-top: 72px;
   overflow: scroll;
 }
@@ -161,7 +168,7 @@ section {
   border: 2px solid var(--oker);
   border-top: none;
 }
-.flipbook .page:first-of-type img {
+.flipbook .p-start img {
   border-top: 2px solid var(--oker);
 }
 
@@ -181,12 +188,17 @@ section {
 
 /* ___Section 3___ */
 #section-3 {
+  height: 100dvh;
+  width: 100%;
   position: fixed;
-  width: fit-content;
   bottom: 0;
   right: 0;
   text-align: right;
-  z-index: 20;
+  z-index: 10;
+}
+.lang-selection {
+  width: 100%;
+  align-self: flex-end;
 }
 .lang-link {
   display: inline-block;
@@ -312,6 +324,16 @@ section {
   .flipbook .page img {
     max-width: 100%;
     height: 100%;
+    border: 2px solid var(--oker);
+  }
+  .flipbook .even img {
+    border-left: 1px solid var(--oker);
+  }
+  .flipbook .odd img {
+    border-right: 1px solid var(--oker);
+  }
+  .flipbook .p-start img,
+  .flipbook .p-end img {
     border: 2px solid var(--oker);
   }
   /* ^^^ responsiviteit! ^^^ */
