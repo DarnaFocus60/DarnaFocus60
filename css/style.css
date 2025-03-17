@@ -140,7 +140,7 @@ section {
 
 /* ___Section 2___ */
 #section-2 {
-  height: 100vh;
+  height: 100dvh;
   padding-top: 72px;
   overflow: scroll;
 }
